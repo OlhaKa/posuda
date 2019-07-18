@@ -1,0 +1,70 @@
+@import "media";
+@import "vars";
+@import "home";
+
+body {
+  font-family: $montserrat;
+}
+
+input,
+button {
+  &:focus {
+    outline: none;
+  }
+}
+
+a {
+  color: #222222;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+h1 {
+  font-size: 36px;
+  line-height: 44px;
+  text-transform: uppercase;
+}
+
+//========HEADER=========
+.top-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 100px;
+}
+
+.header-contacts {
+  font-size: 12px;
+  line-height: 15px;
+  columns: 2;
+  column-gap: 82px;
+  a {
+    display: block;
+    color: #000000;
+    text-decoration: none;
+  }
+}
+
+.header-search {
+  input {
+    height: 40px;
+    width: 342px;
+    border-radius: 20px;
+    border: 2px solid $dark-grey;
+    padding: 0 40px 0 10px;
+    background: url("../media/search-icon.svg") no-repeat 94% 50%;
+    &::placeholder {
+      font-weight: 500;
+      color: $dark-grey;
+      font-size: 13px;
+    }
+  }
+}
+
+.btm-header {
+  min-height: 50px;
+  background-color: $dark-grey;
+}
+
+//========HEADER=========
