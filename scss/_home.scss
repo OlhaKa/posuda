@@ -263,6 +263,7 @@
       -webkit-box-orient: vertical;
       -webkit-line-clamp: 2;
       word-wrap: break-word;
+      min-height: 34px;
     }
 
     .prod-price {
@@ -352,8 +353,8 @@
 .rating-wrap {
   display: flex;
   align-items: center;
-  margin-top: 50px;
-  margin-bottom: 100px;
+  margin-top: 60px;
+  margin-bottom: 50px;
 }
 
 .rating-info {

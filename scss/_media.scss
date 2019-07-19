@@ -2,7 +2,7 @@
 
 }
 
-@media (max-width: 959.98px) {
+@media (max-width: 991.98px) {
 
 }
 
@@ -24,8 +24,36 @@
   }
 }
 
-@media (min-width: 960px)  {
+@media (min-width: 992px)  {
+  .nav-menu ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+  .nav-menu {
+    position: relative;
 
+    &>ul {
+      display: flex;
+      &>li{
+        position: relative;
+        &:hover {
+          .sub-menu {
+            top: 50px;
+            z-index: 1;
+          }
+        }
+      }
+    }
+  }
+  .sub-menu {
+    position: absolute;
+    top: -100vh;
+    width: 100vw;
+    background-color: rgba(56, 56, 56, 0.95);
+    min-height: 250px;
+    transition: .2s;
+  }
 }
 
 @media (min-width: 768px) {
