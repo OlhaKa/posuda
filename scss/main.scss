@@ -2,6 +2,7 @@
 @import "vars";
 @import "home";
 
+
 body {
   font-family: $montserrat;
 }
@@ -64,16 +65,70 @@ h1 {
   }
 }
 
-.btm-header {
-  min-height: 50px;
-  background-color: $dark-grey;
+.basket-btn {
+  position: relative;
 }
 
-.nav-menu{
+.shopping-counter {
+  font-weight: 500;
+  font-size: 10px;
+  color: #231F20;
+  position: absolute;
+  top: -3px;
+  right: -12px;
+}
+
+#main-nav{
   a {
     color: #FFFFFF;
   }
 }
+
+// ---mobile----
+
+.hc-offcanvas-nav {
+  li.nav-close a {
+    background: #222222;
+    border: none;
+    font-weight: bold;
+  }
+  a {
+     
+      font-size: 12px;
+      line-height: 15px;
+      text-transform: uppercase;
+      border-bottom: none; 
+    }
+}
+
+.hc-offcanvas-nav .nav-wrapper {
+  background: rgba(56, 56, 56, 0.95);
+}
+
+.hc-offcanvas-nav .nav-container {
+  top: 100px;
+}
+.nav-open.hc-offcanvas-nav .nav-container {
+  width: 100%;
+}
+
+.hc-offcanvas-nav.disable-body::after {
+  background: transparent;
+}
+
+.hc-offcanvas-nav li.nav-close a:hover,
+ .hc-offcanvas-nav li.nav-back a:hover,
+ .hc-offcanvas-nav:not(.touch-device) a:hover {
+  background: rgba(56, 56, 56, 0.85);
+}
+
+.hc-offcanvas-nav li.nav-back a{
+  border-bottom: none;
+  background: #222222;
+}
+
+
+
 
 //========HEADER END=========
 
@@ -171,3 +226,5 @@ footer {
   }
 }
 //========FOOTER END=========
+
+

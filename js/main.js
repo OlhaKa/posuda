@@ -13,11 +13,30 @@ $(document).ready(function(){
         prevArrow: '<i class="fas fa-chevron-left"></i></i>',
     });
     
-    $(window).on("load", "scroll", function () {
-        if ((window.innerWidth) < 992) {
-            var slinky = $('.nav-menu').slinky({
-                title: true
-            });
-        }
-    })
+    // $(window).on("load", "resize", function () {
+    //     if ((window.innerWidth) < 992) {
+    //         var slinky = $('.nav-menu').slinky({
+    //             title: true
+    //         });
+    //     }
+    // })
+
+    var $toggle = $('#toggler-menu');
+
+    $('#main-nav').hcOffcanvasNav({
+        maxWidth: 992,
+        side: "left",
+        labelClose: 'МЕНЮ',
+        labelBack: 'НАЗАД',
+        customToggle: $toggle,
+      });
+        
+
+      $(".toggler-search").click(function () {
+        $(".header-search").slideToggle();
+    });
+
+    $(".toggler-contacts").click(function () {
+        $(".header-contacts").slideToggle();
+    });
 });
