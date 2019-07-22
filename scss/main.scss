@@ -14,6 +14,10 @@ button {
   }
 }
 
+input[type="search"]::-webkit-search-cancel-button {
+  display: none;
+}
+
 a {
   color: #222222;
   &:hover {
@@ -39,7 +43,7 @@ h1 {
   font-size: 12px;
   line-height: 15px;
   columns: 2;
-  column-gap: 82px;
+  //column-gap: 82px;
   a {
     display: block;
     color: #000000;
@@ -81,6 +85,9 @@ h1 {
 #main-nav{
   a {
     color: #FFFFFF;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
   }
 }
 
@@ -127,7 +134,10 @@ h1 {
   background: #222222;
 }
 
-
+.hc-offcanvas-nav li.nav-close span::before,
+.hc-offcanvas-nav li.nav-close span::after {
+  display: none;
+}
 
 
 //========HEADER END=========
@@ -207,6 +217,8 @@ footer {
     border: 2px solid rgba(225, 225, 225, 0.3);
     padding: 0 40px 0 10px;
     background: transparent;
+    caret-color: #FFFFFF;
+    color: #FFFFFF;
     &:focus {
       border: 2px solid #FFFFFF;
     }
