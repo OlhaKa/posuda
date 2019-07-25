@@ -290,7 +290,7 @@
     transition: .2s;
   }
 
-  a {
+  a,span{
     border-radius: 20px;
     background: linear-gradient(90deg, #FF0084 0%, #FF0084 11.46%, #CD5493 37.51%, #AC71B0 67.2%, #757BBB 90.11%, #6D7CBC 100%);
     background-clip: text;
@@ -311,7 +311,7 @@
   &:hover {
     transition: .2s;
 
-    a {
+    a, span {
       color: rgba(0, 0, 0, 0);
       transition: .2s;
     }

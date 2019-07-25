@@ -39,4 +39,13 @@ $(document).ready(function(){
     $(".toggler-contacts").click(function () {
         $(".header-contacts").slideToggle();
     });
+
+    $('#sort-select').selectpicker({
+        width: 'fit'
+    });
+
+    $('.filters-btn').click(function () {
+        $('.filters-wrap').toggleClass('showed');
+    })
+
 });
