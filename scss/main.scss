@@ -72,7 +72,7 @@ main {
       font-weight: 500;
       color: $dark-grey;
       font-size: 13px;
-      line-height: 12px;
+      line-height: 38px;
       vertical-align: middle;
     }
   }
@@ -231,6 +231,9 @@ footer {
     &:focus {
       border: 2px solid #FFFFFF;
     }
+    &:focus ~ span #footer-search-btn {
+      background: url(../media/search-icon.svg) no-repeat center, #ffffff;
+    }
   }
   button {
     position: absolute;
@@ -241,9 +244,6 @@ footer {
     height: 40px;
     border-radius: 20px;
     background: url(../media/search-icon.svg) no-repeat center, #646464;
-    &:hover {
-      background: url(../media/search-icon.svg) no-repeat center, #ffffff;
-    }
   }
 }
 //========FOOTER END=========
