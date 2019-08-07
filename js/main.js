@@ -37,7 +37,7 @@ $(document).ready(function(){
     });
 
     $(".toggler-contacts").click(function () {
-        $(".header-contacts").slideToggle();
+        $(".header-contacts-wrap").slideToggle();
     });
 
     $('#sort-select').selectpicker({

@@ -55,6 +55,11 @@ main {
   }
 }
 
+.toggler-contacts,
+.toggler-search {
+  cursor: pointer;
+}
+
 .header-search {
   input {
     height: 40px;
