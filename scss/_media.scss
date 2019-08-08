@@ -55,6 +55,7 @@
     color: #ffffff;
     display: none;
     padding: 26px 0;
+
     a {
       color: #ffffff;
       max-width: fit-content;
@@ -96,28 +97,76 @@
   //  column-gap: 82px;
   //  columns: 2;
   //}
+  .catalog .filters-wrap {
+    padding-right: 0;
+    position: absolute;
+    left: 15px;
+    top: 46px;
+    width: calc(50% - 18px);
+    z-index: 1;
+    background: #FFFFFF;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.2s ease;
 
-  .catalog .catalog-grid {
-    grid-template-columns: repeat(2, 1fr);
+    &.showed {
+      transform: scaleY(1);
+      background: #f6f6f6;
+    }
+
+    .filter-control {
+      padding: 30px 20px;
+    }
+  }
+  .catalog .catalog-settings {
+    flex-wrap: wrap;
+
+    .filters-btn,
+    .sorting {
+      flex-basis: calc(50% - 3px);
+    }
+
+    .sorting {
+      height: 41px;
+      background: #F6F6F6;
+      margin-left: 3px;
+      margin-top: -30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &:hover {
+        background: $gradient;
+
+        .bootstrap-select > .dropdown-toggle.bs-placeholder {
+          color: #FFFFFF;
+        }
+      }
+
+      .dropdown {
+        min-width: 100%;
+      }
+
+      .dropdown-toggle {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+
+    .pagination {
+      flex-grow: 2;
+      justify-content: center;
+    }
+
+    .select-header {
+      display: none;
+    }
   }
 }
 
 @media (max-width: 767.98px) {
-  .catalog .catalog-settings {
-    flex-direction: column;
-  }
-  .catalog .filters-wrap {
-    padding-right: 0;
-    position: absolute;
-    left: -100vw;
-    top: 55px;
-    background: #FFFFFF;
-    transition: left .2s;
-    &.showed {
-      left: 0;
-      width: 100%;
-      z-index: 1;
-    }
+  .catalog .catalog-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   body h1 {
@@ -148,6 +197,33 @@
 }
 
 @media (max-width: 575.98px) {
+  body .catalog {
+    padding-top: 5px;
+
+    .catalog-settings {
+      margin: 0 -15px;
+
+      .filters-btn {
+        margin: 0 0 5px 0;
+        flex-basis: 100%;
+      }
+
+      .sorting {
+        margin: 0 0 43px 0;
+        flex-basis: 100%;
+        .dropdown-menu {
+          margin-left: 5px;
+        }
+      }
+    }
+
+    .filters-wrap {
+      width: 100%;
+      left: 0;
+    }
+  }
+
+
   .catalog .catalog-grid {
     grid-template-columns: 1fr;
   }
@@ -207,7 +283,13 @@
     column-gap: 82px;
   }
 }
+
 @media (min-width: 992px) {
+  .dropdown-menu {
+    left: -140px !important;
+    min-width: 340px;
+  }
+
   .container-lg {
     max-width: calc(100% - 100px);
   }
@@ -231,6 +313,7 @@
 
       & > li {
         padding-bottom: 6px;
+
         &:hover {
           .sub-menu {
             visibility: visible;
@@ -247,8 +330,13 @@
           transition: .2s;
 
           &.with-label {
-            background: $pink;
+            background: $gradient;
+            background-size: 600% 600%;
             padding: 1px 2px;
+
+            &:hover {
+              animation: Animation 5s ease infinite;
+            }
           }
 
           &:not(.with-label):before {
@@ -264,6 +352,7 @@
 
           &:not(.with-label):hover {
             color: $pink;
+
             &:before {
               font-weight: normal;
               display: block;
@@ -285,12 +374,14 @@
     opacity: 0;
     padding: 26px 65px 44px;
     columns: 4;
+
     li {
       a {
         display: inline-block;
         margin: 6px 0;
         text-transform: initial !important;
         transition: .2s;
+
         &:hover {
           color: $pink !important;
           font-weight: 500;
@@ -301,7 +392,11 @@
 }
 
 @media (min-width: 768px) {
-
+  .filter-control {
+    &:first-child {
+      padding-top: 0;
+    }
+  }
 }
 
 @media (min-width: 576px) {
@@ -331,5 +426,17 @@
         transform: scaleX(1);
       }
     }
+  }
+}
+
+@keyframes Animation {
+  0% {
+    background-position: 10% 0%
+  }
+  50% {
+    background-position: 91% 100%
+  }
+  100% {
+    background-position: 10% 0%
   }
 }

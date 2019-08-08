@@ -5,7 +5,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>POSUDA</title>
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/bootstrap-select.min.css">
@@ -28,13 +28,15 @@
             <div class="toggler-contacts d-lg-none">
                 <img src="media/phone-call.svg" alt="">
             </div>
-            <div class="header-contacts">
-                <div>Пн.-Пт. с 09-00 до 19-00</div>
-                <div>Сб. с 10-00 до 16-00</div>
-                <a href="tel:0443322190">044-332-21-90</a>
-                <a href="tel:0671627220">067-162-72-20</a>
-                <a href="tel:0509036410">050-903-64-10</a>
-                <a href="tel:0630433600">063-043-36-00</a>
+            <div class="header-contacts-wrap">
+                <div class="header-contacts">
+                    <div>Пн.-Пт. с 09-00 до 19-00</div>
+                    <div>Сб. с 10-00 до 16-00</div>
+                    <a href="tel:0443322190">044-332-21-90</a>
+                    <a href="tel:0671627220">067-162-72-20</a>
+                    <a href="tel:0509036410">050-903-64-10</a>
+                    <a href="tel:0630433600">063-043-36-00</a>
+                </div>
             </div>
             <div class="toggler-search d-lg-none">
                 <img src="media/search-icon.svg" alt="">
@@ -120,17 +122,20 @@
         </div>
     </div>
 </header>
-
+<div class="counterBox">
+    <span>Выбрано: </span>
+    <span> 17</span>
+    <div class="gradient-btn">
+        <a href="">Показать</a>
+    </div>
+</div>
 <main class="catalog">
 
     <div class="container">
         <div class="row">
-            <div class="col-md-4 col-lg-3">
-                <div class="filters-btn gradient-btn">
-                        <span>Фильтры</span>
-                </div>
+            <div class="col-lg-3">
                 <div class="filters-wrap">
-                    <form action="">
+                    <form action="" id="filters-form">
                         <div class="filter-control">
                             <button class="filter-toggler collapsed" type="button" data-toggle="collapse" data-target="#producers" aria-expanded="false">
                                 Производитель
@@ -199,14 +204,22 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="filter-control">
+                            <button class="filter-toggler reset-form-btn" >
+                                очистить
+                            </button>
+                        </div>
                     </form>
                 </div>
             </div>
-            <div class="col-md-8 col-lg-9">
+            <div class="col-lg-9">
                 <div class="catalog-settings">
+                    <div class="filters-btn d-lg-none">
+                        <span>Фильтры</span>
+                    </div>
                     <div class="sorting">
-                        <span>Сортировать</span>
-                        <select id="sort-select">
+                        <span class="select-header">Сортировать</span>
+                        <select id="sort-select" data-style="select-btn">
                             <option>по популярности</option>
                             <option>от дешевых</option>
                             <option>от дорогих</option>
@@ -322,9 +335,15 @@
         </div>
     </div>
     <div class="container container-lg rating-wrap">
-        <input type="range" value="4.5" step="0.25" id="backing5">
-        <div class="rateit" data-rateit-starwidth="18" data-rateit-backingfld="#backing5" data-rateit-resetable="false" data-rateit-ispreset="true"
-             data-rateit-min="0" data-rateit-max="5">
+        <input type="range" value="4.5" step="0.5" id="backing5">
+        <div class="rateit"
+             data-rateit-starwidth="16"
+             data-rateit-starheight="16"
+             data-rateit-backingfld="#backing5"
+             data-rateit-resetable="false"
+             data-rateit-ispreset="true"
+             data-rateit-min="0"
+             data-rateit-max="5">
         </div>
         <div class="rating-info">рейтинг:&nbsp;<span>4.5/5 100</span>&nbsp;голосов</div>
     </div>

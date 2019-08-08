@@ -324,7 +324,6 @@
   border: 2px solid transparent;
   position: relative;
 
-
   &:before {
     position: absolute;
     top: -4px;
@@ -340,7 +339,7 @@
 
   a, span {
     border-radius: 20px;
-    background: linear-gradient(90deg, #FF0084 0%, #FF0084 11.46%, #CD5493 37.51%, #AC71B0 67.2%, #757BBB 90.11%, #6D7CBC 100%);
+    background: $gradient;
     background-clip: text;
     -webkit-background-clip: text;
     display: block;

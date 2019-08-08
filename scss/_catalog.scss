@@ -16,15 +16,22 @@
   text-transform: uppercase;
   color: #222222;
 
-  .btn-light {
+  .dropdown {
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .dropdown-toggle {
     font-weight: 600;
     font-size: 15px;
     line-height: 18px;
     text-transform: uppercase;
     color: #222222;
     background: #FFFFFF;
-    padding-bottom: 8px;
+    padding: 6px 2px 8px;
     border: none;
+
     &:focus {
       outline: none !important;
       box-shadow: none !important;
@@ -32,9 +39,18 @@
     }
   }
 
-  .show>.btn-light.dropdown-toggle {
-    background: #FFFFFF !important;
-    border: none
+  .select-btn {
+    background: transparent;
+  }
+
+  .bootstrap-select > .dropdown-toggle.bs-placeholder {
+    color: #222222;
+  }
+
+  .show > .dropdown-toggle {
+    background: transparent !important;
+    border: none;
+
   }
 
   .dropdown-menu {
@@ -42,15 +58,19 @@
     background: #F7F7F7;
     box-shadow: 1px 0 0 #EEEEEE;
     border-radius: 0;
+
     li {
       padding: 15px 0;
+
       &:hover {
         background-color: #dddddd;
+
         a {
           background-color: #dddddd;
         }
       }
     }
+
     .selected {
       display: none;
     }
@@ -61,12 +81,13 @@
     color: #222222;
   }
 
-  .dropdown-item{
+  .dropdown-item {
     padding: .25rem 14px;
     font-weight: 600;
     font-size: 15px;
     line-height: 18px;
     color: #222222;
+
     &:focus {
       outline: none;
     }
@@ -76,6 +97,7 @@
 .pagination {
   display: flex;
   align-items: center;
+
   a {
     font-weight: 600;
     font-size: 15px;
@@ -83,6 +105,7 @@
     color: rgba(34, 34, 34, 0.3);
     display: inline-block;
     margin: 0 12px;
+
     &.active,
     &:hover {
       color: #222222;
@@ -97,7 +120,8 @@
   grid-column-gap: 30px;
   grid-row-gap: 50px;
   margin-bottom: 50px;
-  margin-top: 75px;
+  margin-top: 80px;
+
   .img-wrap {
     height: 320px;
     border: 2px solid #f4f4f4;
@@ -109,6 +133,7 @@
       max-width: 100%;
     }
   }
+
   .prod-card {
     position: relative;
 
@@ -172,16 +197,17 @@
 .filter-control {
   border-bottom: 1px solid #EEEEEE;
   padding: 40px 0;
-  &:first-child {
-    padding-top: 0;
-  }
+
   &:last-child {
     border-bottom: 0;
   }
+
   .card {
     border: none;
     padding: 0;
+    background-color: transparent;
   }
+
   .collapse {
     transition: display 1s;
   }
@@ -190,6 +216,22 @@
 .filters-btn {
   margin-bottom: 30px;
   cursor: pointer;
+  height: 41px;
+  background: #F6F6F6;
+  margin-right: 3px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 15px;
+  line-height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover,
+  &.active {
+    background: $gradient;
+    color: #FFFFFF;
+  }
 }
 
 .filter-toggler {
@@ -198,7 +240,7 @@
   padding: 0 25px 0 0;
   border: none;
   outline: none;
-  background-color: #fff;
+  background-color: transparent;
   font-weight: 600;
   font-size: 15px;
   line-height: 18px;
@@ -206,6 +248,7 @@
   color: #222222;
   margin-bottom: 22px;
   position: relative;
+
   &:after {
     content: "-";
     color: #222222;
@@ -214,6 +257,7 @@
     right: 10px;
     top: 0;
   }
+
   &.collapsed {
     &:after {
       content: '+';
@@ -228,14 +272,14 @@
   position: absolute;
   left: -9999px;
 }
+
 [type="checkbox"]:checked + label {
   color: #222222 !important;
   font-weight: 500;
 }
 
 [type="checkbox"]:checked + label,
-[type="checkbox"]:not(:checked) + label
-{
+[type="checkbox"]:not(:checked) + label {
   position: relative;
   cursor: pointer;
   line-height: 24px;
@@ -244,6 +288,7 @@
   color: #555555;
   width: 100%;
 }
+
 [type="checkbox"]:checked + label:before,
 [type="checkbox"]:not(:checked) + label:before {
   content: '';
@@ -256,6 +301,7 @@
   border-radius: 50%;
   background: #fff;
 }
+
 [type="checkbox"]:checked + label:after,
 [type="checkbox"]:not(:checked) + label:after {
   content: '';
@@ -269,13 +315,46 @@
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
+
 [type="checkbox"]:not(:checked) + label:after {
   opacity: 0;
   -webkit-transform: scale(0);
   transform: scale(0);
 }
+
 [type="checkbox"]:checked + label:after {
   opacity: 1;
   -webkit-transform: scale(1);
   transform: scale(1);
+}
+
+.reset-form-btn {
+  text-align: center;
+}
+
+.counterBox {
+  position: fixed;
+  background: #646464;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 15px;
+  color: #FFFFFF;
+  min-height: 150px;
+  padding: 30px 20px;
+  z-index: 2;
+  display: none;
+  transition: top .2s ease;
+  .gradient-btn {
+    width: 106px;
+    background: #646464;
+    margin-top: 25px;
+    &:before {
+      background: #FFFFFF;
+      width: 110px;
+    }
+    a {
+      color: #FFFFFF;
+      width: 106px;
+    }
+  }
 }
