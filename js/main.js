@@ -1,3 +1,7 @@
+$(window).on('load', function () {
+    $("#preloader").fadeOut("slow");
+});
+
 $(document).ready(function () {
         $(".home-banners").slick({
             slidesToShow: 1,
@@ -76,6 +80,20 @@ $(document).ready(function () {
             width: 'fit'
         });
 
+        $('body').on('click', function (e) {
+            const filtersWrap = $('.filters-wrap'),
+                filters = filtersWrap.has(e.target).length === 0,
+                filtersBtnWrap = $('.filters-btn');
+                filtersBtn = filtersBtnWrap.has(e.target).length === 0;
 
+            if (!filtersWrap.is(e.target)
+                && filters
+                && !filtersBtnWrap.is(e.target)
+                && filtersBtn) {
+                filtersWrap.removeClass("showed");
+                filtersBtnWrap.removeClass('active');
+                $('.counterBox').fadeOut()
+            }
+        });
     }
 );

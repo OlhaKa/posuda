@@ -1,0 +1,76 @@
+#preloader {
+  background: #222222;
+  background: -moz-linear-gradient(left,  #ff0084 0%, #6d7cbc 5%, #222222 10%, #222222 100%);
+  background: -webkit-linear-gradient(left,  #ff0084 0%,#6d7cbc 5%,#222222 10%,#222222 100%);
+  background: linear-gradient(to right,  #ff0084 0%,#6d7cbc 5%,#222222 10%,#222222 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff0084', endColorstr='#222222',GradientType=1 );
+
+
+
+
+  //font-size: 100%;
+  margin: 0;
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  h1 {
+    color: #FFFFFF;
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    margin: 40px auto;
+    text-transform: uppercase;
+  }
+}
+.preloader-wrapper {
+  height: 50px;
+  //margin-top: calc(50vh - 25px);
+  //margin-left: calc(50vw - 100px);
+  width: 180px;
+}
+.circle {
+  border-radius: 50%;
+  border: 3px #FFFFFF solid;
+  float: left;
+  height: 50px;
+  margin: 0 5px;
+  width: 50px;
+}
+.circle-1 {
+  animation: move 1s ease-in-out infinite;
+}
+.circle-1a {
+  animation: fade 1s ease-in-out infinite;
+}
+@keyframes fade {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+.circle-2 {
+  animation: move 1s ease-in-out infinite;
+}
+@keyframes move {
+  0% {transform: translateX(0);}
+  100% {transform: translateX(60px);}
+}
+.circle-1a {
+  margin-left: -55px;
+  opacity: 0;
+}
+.circle-3 {
+  animation: circle-3 1s ease-in-out infinite;
+  opacity: 1;
+}
+@keyframes circle-3 {
+  0% {opacity: 1;}
+  100% {opacity: 0;}
+}
+
