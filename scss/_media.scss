@@ -169,6 +169,21 @@
 }
 
 @media (max-width: 767.98px) {
+  .products-table-row {
+    grid-template-areas:
+            "header header header"
+            "sidebar content-1 content-1"
+            "sidebar content-2 content-3"
+            "footer footer footer";
+    .photo {
+
+    }
+    .name {
+
+    }
+
+  }
+
   .catalog .catalog-grid {
     grid-template-columns: repeat(2, 1fr);
   }

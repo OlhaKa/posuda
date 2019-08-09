@@ -57,7 +57,7 @@
 }
 
 .home {
-  h1 {
+  h2 {
     text-align: center;
     margin: 61px 0 45px;
   }
@@ -313,12 +313,18 @@
 
   .buy-btn {
     margin: 20px auto 0;
+    width: 146px;
+    &:before {
+      width: 150px;
+    }
+    a {
+      width: 146px;
+    }
   }
 }
 
 .gradient-btn {
   height: 36px;
-  width: 146px;
   border-radius: 20px;
   background: #FFFFFF;
   border: 2px solid transparent;
@@ -332,7 +338,7 @@
     content: '';
     border-radius: 20px;
     background: $dark-grey;
-    width: 150px;
+
     height: 40px;
     transition: .2s;
   }
@@ -346,7 +352,7 @@
     text-align: center;
     padding-top: 7px;
     height: 36px;
-    width: 146px;
+
     font-weight: 600;
     font-size: 15px;
     line-height: 18px;
