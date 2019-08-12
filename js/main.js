@@ -111,4 +111,24 @@ $(document).ready(function () {
         $input.change();
         return false;
     });
+
+    // --------- ORDER FORM SELECTS--------
+    const paymentSelect = $('#payment-select'),
+        postOfficeSelect = $('#post-office-select');
+
+    paymentSelect.selectpicker({
+        title: "Выберите способ оплаты"
+    });
+    postOfficeSelect.selectpicker({
+        title: "Выберите номер отделения"
+    });
+
+    paymentSelect.on('changed.bs.select', function () {
+        $('[data-id="payment-select"]').find('.filter-option-inner-inner').addClass('selected')
+    });
+
+    postOfficeSelect.change(function (e) {
+        $('[data-id="post-office-select"]').find('.filter-option-inner-inner').addClass('selected')
+    });
+    // --------- ORDER FORM SELECTS END--------
 });
