@@ -131,4 +131,8 @@ $(document).ready(function () {
         $('[data-id="post-office-select"]').find('.filter-option-inner-inner').addClass('selected')
     });
     // --------- ORDER FORM SELECTS END--------
+
+    $('.show-basket-btn').click(function () {
+        $('.sidebar-basket').toggleClass('show')
+    })
 });
