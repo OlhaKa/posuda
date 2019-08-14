@@ -251,9 +251,27 @@
   .home .products-grid-item .overlay {
     padding: 35px 30px;
   }
+
+  .reviews {
+    h1 {
+      margin: 40px 0 30px;
+    }
+  }
+
+  .reviews-head {
+    flex-direction: column;
+    padding-bottom: 30px;
+  }
 }
 
 @media (max-width: 575.98px) {
+  .form-items-row {
+    grid-template-columns: 1fr;
+    label[for=reviewer-name],
+    input[name="name"] {
+      order: -1 !important;
+    }
+  }
   body .checkout {
     padding-bottom: 30px;
   }

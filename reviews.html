@@ -218,9 +218,9 @@
         </div>
         <div class="new-review">
             <h1>Оставить отзыв</h1>
-                <form action="">
+            <form action="">
                 <label>рейтинг *</label>
-                <input type="range" value="4.5" step="0.5" id="new-rate">
+                <input type="range" value="4.5" step="0.5" id="new-rate" autocomplete="off">
                 <div class="rateit"
                      data-rateit-starwidth="16"
                      data-rateit-starheight="16"
@@ -230,18 +230,31 @@
                      data-rateit-min="0"
                      data-rateit-max="5">
                 </div>
-
+                <div class="form-items-row">
                     <label for="reviewer-name">имя *</label>
-                    <input type="text" name="name" id="reviewer-name">
-
                     <label for="reviewer-email">email *</label>
+
+                    <input type="text" name="name" id="reviewer-name">
                     <input name="reviewer-email" id="reviewer-email">
+                </div>
 
-                    <label for="review-text">Ваш отзыв *</label>
-                    <textarea name="review-text" id="review-text" cols="30" rows="5"></textarea>
-
-                </form>
-      
+                <label for="review-text">Ваш отзыв *</label>
+                <textarea name="review-text" id="review-text" cols="30" rows="5"></textarea>
+                <button class="black-btn send-review">Оставить отзыв</button>
+            </form>
+        </div>
+        <div class="rating-wrap">
+            <input type="range" value="4.5" step="0.5" id="reviews-page-rate">
+            <div class="rateit"
+                 data-rateit-starwidth="16"
+                 data-rateit-starheight="16"
+                 data-rateit-backingfld="#reviews-page-rate"
+                 data-rateit-resetable="false"
+                 data-rateit-ispreset="true"
+                 data-rateit-min="0"
+                 data-rateit-max="5">
+            </div>
+            <div class="rating-info">рейтинг:&nbsp;<span>4.5/5 100</span>&nbsp;голосов</div>
         </div>
     </div>
 </main>
@@ -300,7 +313,9 @@
                 <div class="footer-search d-none d-md-block">
                     <form action="">
                         <input type="search" name="search" placeholder="Поиск" autocomplete="off">
-                        <button></button>
+                        <span>
+                             <button id="footer-search-btn"></button>
+                        </span>
                     </form>
                 </div>
             </div>

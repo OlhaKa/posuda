@@ -1,3 +1,9 @@
+.reviews {
+  .rating-wrap {
+    margin: 141px 0 51px;
+  }
+}
+
 .reviews-head {
   display: flex;
   justify-content: space-between;
@@ -54,4 +60,59 @@
   background: url("../media/star-pink.svg"), transparent;
   background-repeat: repeat-x;
   height: 13px;
+}
+
+.new-review {
+  label {
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 18px;
+    text-transform: uppercase;
+    display: block;
+  }
+
+  .form-items-row {
+    margin-top: 40px;
+    margin-bottom: 30px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 19px;
+    label {
+      margin-bottom: 0;
+    }
+    input {
+      border: 2px solid #EEEEEE;
+      height: 49px;
+      padding: 0 20px;
+      font-size: 14px;
+      color: #555555;
+      &:focus {
+        border: 2px solid #222222;
+      }
+    }
+  }
+  textarea {
+    width: 100%;
+    border: 2px solid #EEEEEE;
+    padding: 20px;
+    font-size: 14px;
+    color: #555555;
+    &:focus {
+      border: 2px solid #222222;
+      outline: none;
+    }
+  }
+
+  .send-review {
+    border: none;
+    color: #fff;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 18px;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 0 30px;
+    margin-top: 49px;
+  }
 }
