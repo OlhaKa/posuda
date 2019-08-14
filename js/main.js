@@ -134,5 +134,14 @@ $(document).ready(function () {
 
     $('.show-basket-btn').click(function () {
         $('.sidebar-basket').toggleClass('show')
-    })
+    });
+
+
+    $('.progress-bar').each(function() {
+        let valuenow = $(this).attr("aria-valuenow"),
+            valuemax = $(this).attr("aria-valuemax"),
+            progressBarWidth = (valuenow / valuemax * 100) + '%';
+
+        $(this).width(progressBarWidth)
+    });
 });
