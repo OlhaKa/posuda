@@ -17,6 +17,25 @@ $(document).ready(function () {
         prevArrow: '<i class="fas fa-chevron-left"></i></i>',
     });
 
+    $(".prod-view").slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        fade: true,
+        asNavFor: '.prod-photos',
+        slide: '.prod-view-item'
+    });
+
+    $('.prod-photos').slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        asNavFor: '.prod-view',
+        focusOnSelect: true,
+    });
+
+    var stHeight = $('.prod-photos .slick-track').height();
+    $('.prod-photos .slick-slide').css('height', stHeight);
+
     $(window).on("load resize", function (e) {
         changeSelectTitle()
     });

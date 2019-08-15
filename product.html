@@ -131,93 +131,83 @@
         </div>
     </div>
 </header>
-
 <main class="reviews">
     <div class="container">
-        <div class="reviews-head">
-            <h1>Отзывы</h1>
-            <div class="pagination">
-                <div class="prev-page"><a href=""><</a></div>
-                <span><a href="" class="active">1</a></span>
-                <span><a href="">2</a></span>
-                <span><a href="">3</a></span>
-                <span><a href="">4</a></span>
-                <div class="next-page"><a href="">></a></div>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Посуда для активного отдыха</a>
+                </li>
+                <li class="breadcrumb-item active" aria-current="page">
+                    <span>Казаны</span></li>
+            </ol>
+        </nav>
+
+        <div class="prod-info-wrap">
+            <div class="prod-images">
+                <div class="prod-view">
+                    <div class="prod-label" style="background: #FF0084">Акция</div>
+                    <div class="prod-view-item">
+                        <img src="media/kazan1.png" alt="">
+                    </div>
+                    <div class="prod-view-item">
+                        <img src="media/kazan2.png" alt="">
+                    </div>
+                </div>
+                <div class="prod-photos">
+                    <div>
+                        <img src="media/kazan1.png" alt="">
+                    </div>
+                    <div>
+                        <img src="media/kazan2.png" alt="">
+                    </div>
+                </div>
             </div>
+            <div class="prod-info">
+                <h1>Казан без крышки</h1>
+                <h5>1400 грн</h5>
+                <div class="presence">Есть в наличии</div>
+
+                <div class="prod-review">
+                    <div class="progress">
+                        <div class="progress-bar"
+                             role="progressbar"
+                             aria-valuenow="2"
+                             aria-valuemin="0"
+                             aria-valuemax="5">
+                        </div>
+                    </div>
+                    <div class="show-reviews"><a href="">Отзывы (3)</a></div>
+                    <a href="#new-review" class="link-to-new-review">Оставить отзыв</a>
+                </div>
+                <div class="prod-id">
+                   <span>
+                       <span>Артикул: </span>
+                       <span>#1102153</span>
+                   </span>
+                    <span>
+                       <span>Код товара: </span>
+                       <span>541324</span>
+                   </span>
+                </div>
+                <div class="prod-data">
+                    Казан с качественным и безопасным каменным антипригарным покрытием Whitford Skandia Xtreme. d=20 см.
+                </div>
+                <div class="prod-actions">
+                    <div class="prod-cont">
+                        <span class="minus">-</span>
+                        <input type="text" value="1"/>
+                        <span class="plus">+</span>
+                    </div>
+                    <div class="buy-btn">
+                        <a href="">Купить</a>
+                    </div>
+                </div>
+            </div>
+           <div class="prod-bonuses"></div>
+
         </div>
-        <div class="prev-reviews">
-            <div class="review-wrap">
-                <div class="reviewer-info">
-                    <div class="reviewer-data">
-                    <span class="name">
-                        Максим Борцов
-                    </span>
-                        <span class="date">
-                        13 июля 2019
-                    </span>
-                    </div>
-                    <div class="progress">
-                        <div class="progress-bar"
-                             role="progressbar"
-                             aria-valuenow="2.5"
-                             aria-valuemin="0"
-                             aria-valuemax="5">
-                        </div>
-                    </div>
-                </div>
-                <div class="prev-review-text">
-                    Подходит, чтобы быстро закипятить не большое количество воды. Пользуюсь неделю - доволен.
-                </div>
-            </div>
-            <div class="review-wrap">
-                <div class="reviewer-info">
-                    <div class="reviewer-data">
-                    <span class="name">
-                        Максим Борцов
-                    </span>
-                        <span class="date">
-                        13 июля 2019
-                    </span>
-                    </div>
-                    <div class="progress">
-                        <div class="progress-bar"
-                             role="progressbar"
-                             aria-valuenow="1"
-                             aria-valuemin="0"
-                             aria-valuemax="5">
-                        </div>
-                    </div>
-                </div>
-                <div class="prev-review-text">
-                    Подходит, чтобы быстро закипятить не большое количество воды. Пользуюсь неделю - доволен.
-                </div>
-            </div>
-            <div class="review-wrap">
-                <div class="reviewer-info">
-                    <div class="reviewer-data">
-                    <span class="name">
-                        Максим Борцов
-                    </span>
-                        <span class="date">
-                        13 июля 2019
-                    </span>
-                    </div>
-                    <div class="progress">
-                        <div class="progress-bar"
-                             role="progressbar"
-                             aria-valuenow="4.5"
-                             aria-valuemin="0"
-                             aria-valuemax="5">
-                        </div>
-                    </div>
-                </div>
-                <div class="prev-review-text">
-                    Подходит, чтобы быстро закипятить не большое количество воды. Пользуюсь неделю - доволен.
-                </div>
-            </div>
-        </div>
-        <div class="new-review">
-            <h1>Оставить отзыв</h1>
+        <div class="new-review" id="new-review">
+            <h1>Отзыв о товаре</h1>
             <form action="">
                 <div class="rate-row">
                     <label for="new-rate">оценка *</label>

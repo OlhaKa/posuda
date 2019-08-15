@@ -237,22 +237,22 @@
       max-width: 100%;
     }
 
-    &:before {
-      border: 2px solid #6D7CBC;
-      top: 0;
-      left: 0;
-      //z-index: -1;
-      -webkit-transform: translate(-60px, -60px);
-      -ms-transform: translate(-60px, -60px);
-      transform: translate(-60px, -60px);
-      content: "";
-      display: block;
-      position: absolute;
-      width: calc(100% + 4px);
-      height: 100%;
-      opacity: 0;
-      transition: all .7s ease;
-    }
+    //&:before {
+    //  border: 2px solid #6D7CBC;
+    //  top: 0;
+    //  left: 0;
+    //  //z-index: -1;
+    //  -webkit-transform: translate(-60px, -60px);
+    //  -ms-transform: translate(-60px, -60px);
+    //  transform: translate(-60px, -60px);
+    //  content: "";
+    //  display: block;
+    //  position: absolute;
+    //  width: calc(100% + 4px);
+    //  height: 100%;
+    //  opacity: 0;
+    //  transition: all .7s ease;
+    //}
   }
 
   .prod-card {
