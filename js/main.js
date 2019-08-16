@@ -3,9 +3,23 @@ $(window).on('load', function () {
 });
 
 $(document).ready(function () {
+    $(window).scroll(function () {
+        var scroll = $(window).scrollTop();
+        if (scroll > 120) {
+            $('.catalog-toggle-block').addClass('fixed fade-in')
+        } else {
+            $('.catalog-toggle-block').removeClass('fixed fade-in')
+        }
+    });
+
+
     $(".home-banners").slick({
         slidesToShow: 1,
         infinite: true,
+        fade: true,
+        speed: 1000,
+        cssEase: 'ease-in',
+        autoplay: true,
         nextArrow: '<i class="fas fa-chevron-right"></i></i>',
         prevArrow: '<i class="fas fa-chevron-left"></i></i>',
     });
@@ -160,7 +174,13 @@ $(document).ready(function () {
         let valuenow = $(this).attr("aria-valuenow"),
             valuemax = $(this).attr("aria-valuemax"),
             progressBarWidth = (valuenow / valuemax * 100) + '%';
-
         $(this).width(progressBarWidth)
     });
+
+    $('.show-reviews').on('click', function (e) {
+        $([document.documentElement, document.body]).animate({
+            scrollTop: $("#prod-descr").offset().top
+        });
+        $('#prod-descr a[href="#d"]').tab('show');
+    })
 });

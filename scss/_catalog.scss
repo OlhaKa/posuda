@@ -274,7 +274,7 @@
 }
 
 [type="checkbox"]:checked + label {
-  color: #222222 !important;
+  color: $pink !important;
   font-weight: 500;
 }
 
@@ -297,8 +297,7 @@
   top: 0;
   width: 24px;
   height: 24px;
-  border: 6px solid #DDDDDD;
-  border-radius: 50%;
+  border: 1px solid #222222;
   background: #fff;
 }
 
@@ -307,7 +306,7 @@
   content: '';
   width: 12px;
   height: 12px;
-  background: $pink;
+  background:url("../media/check-icon.svg") no-repeat center;
   border-radius: 50%;
   position: absolute;
   top: 6px;
