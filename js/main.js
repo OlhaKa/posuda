@@ -72,7 +72,7 @@ $(document).ready(function () {
         } else if ($("input:checked").length && $('.filters-wrap').hasClass('showed')) {
             counterBox.fadeIn();
         }
-    })
+    });
 
     function getCounterPosition() {
         $('input[type="checkbox"]').click(function () {
@@ -110,7 +110,13 @@ $(document).ready(function () {
     });
 
     $('#sort-select').selectpicker({
-        width: 'fit'
+        width: 'fit',
+        iconBase: 'fa fa-angle-down'
+    });
+
+    $('#count-select').selectpicker({
+        width: 'fit',
+        iconBase: 'fa fa-angle-down'
     });
 
     $('body').on('click', function (e) {
@@ -182,5 +188,45 @@ $(document).ready(function () {
             scrollTop: $("#prod-descr").offset().top
         });
         $('#prod-descr a[href="#d"]').tab('show');
+    });
+
+
+
+    // ==========PRICE SLIDER==========
+// Min & max values
+    let min = 10,
+        max = 3000;
+
+    function initPriceSlider() {
+        $("#price-slider").slider({
+            min: min,
+            max: max,
+            values: [min,  max],
+            range: true,
+            animate: "fast",
+            slide: function( event, ui ) {
+                $( "#amount" ).val(ui.values[ 0 ] + " грн" + " - " + ui.values[ 1 ] + " грн");
+            },
+            change: function() {
+                var counterTop = $("#price-slider").offset().top - $(window).scrollTop(),
+                    counterLeft = $('.filters-wrap').offset().left + $('.filters-wrap').width() + 11;
+
+                if (counterBox.is(":hidden")) {
+                    counterBox.fadeIn();
+                }
+                counterBox.css({top: counterTop - 60, left: counterLeft});
+            }
+        });
+    }
+    initPriceSlider();
+
+    $( "#amount" ).val($( "#price-slider" ).slider("values", 0 ) +
+        " грн" + " - " + $( "#price-slider" ).slider( "values", 1 ) + " грн" );
+
+      // ==========PRICE SLIDER END==========
+
+    $('.reset-form-btn').click(function () {
+        counterBox.fadeOut();
+        $("#price-slider").slider( "option", "values", [ min, max ] );
     })
 });

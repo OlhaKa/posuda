@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/bootstrap-select.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css">
     <link rel="stylesheet" href="css/slick.css">
     <link rel="stylesheet" href="fonts/fontawesome-5.7.2/all.css">
     <link rel="stylesheet" href="css/rateit.css">
@@ -180,7 +181,10 @@
                             </button>
                             <div class="collapse" id="filter-price">
                                 <div class="card card-body">
-                                    todo: make slider
+                                    <div id="price-slider"></div>
+                                    <div class="price-values">
+                                        <input type="text" id="amount" readonly>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -214,8 +218,8 @@
                             </div>
                         </div>
                         <div class="">
-                            <button class=" reset-form-btn" >
-                                очистить &times;
+                            <button class="reset-form-btn">
+                                очистить +
                             </button>
                         </div>
                     </form>
@@ -232,9 +236,19 @@
                             <option>по популярности</option>
                             <option>от дешевых</option>
                             <option>от дорогих</option>
+                            <option>Название (А – я)</option>
+                            <option>Название (Я – а)</option>
                         </select>
-
                     </div>
+                    <div class="items-on-page">
+                        <span class="select-header">показывать</span>
+                        <select id="count-select" data-style="select-btn" data-iconBase="fa" data-tickIcon="fa-check">
+                            <option>15</option>
+                            <option>24</option>
+                            <option>33</option>
+                        </select>
+                    </div>
+
                     <div class="pagination">
                         <div class="first-page"><a href="">&laquo;</a></div>
                         <div class="prev-page"><a href="">&#8249;</a></div>
@@ -340,7 +354,21 @@
                             <a href="">купить</a>
                         </div>
                     </div>
-
+                </div>
+                <div class="more-items-wrap">
+                    <div class="more-items-btn">
+                        <button>Показать Еще 30 товаров +</button>
+                    </div>
+                    <div class="pagination">
+                        <div class="first-page"><a href="">&laquo;</a></div>
+                        <div class="prev-page"><a href="">&#8249;</a></div>
+                        <span><a href="" class="active">1</a></span>
+                        <span><a href="">2</a></span>
+                        <span><a href="">3</a></span>
+                        <span><a href="">4</a></span>
+                        <div class="next-page"><a href="">&#8250;</a></div>
+                        <div class="last-page"><a href="">&raquo;</a></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -438,6 +466,10 @@
 <script src="js/popper.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/jquery.rateit.min.js"></script>
+<script
+        src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+        integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+        crossorigin="anonymous"></script>
 <script src="js/hc-offcanvas-nav.js"></script>
 <script src="js/bootstrap-select.min.js"></script>
 <script src="js/main.js"></script>
