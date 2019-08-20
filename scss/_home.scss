@@ -108,6 +108,7 @@
 .products-grid-item {
   position: relative;
   text-align: center;
+  overflow: hidden;
 
   a {
     display: block;
@@ -157,37 +158,27 @@
   }
 
   &:hover {
-    .more-btn span {
-      -webkit-animation: focus-in-contract 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-      animation: focus-in-contract 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-    }
-
-    .prod-cat {
-      -webkit-animation: text-shadow-drop-center 0.6s both;
-      animation: text-shadow-drop-center 0.6s both;
-    }
+   img {
+     -webkit-animation: kenburns-bottom-right 5s ease-out both;
+     animation: kenburns-bottom-right 5s ease-out both;
+   }
   }
 
 
 }
 
-@keyframes focus-in-contract {
+@keyframes kenburns-bottom-right {
   0% {
-    letter-spacing: 0.5em;
-    opacity: 0;
+    -webkit-transform: scale(1) translate(0, 0);
+    transform: scale(1) translate(0, 0);
+    -webkit-transform-origin: 84% 84%;
+    transform-origin: 84% 84%;
   }
   100% {
-    opacity: 1;
-  }
-}
-
-
-@keyframes text-shadow-drop-center {
-  0% {
-    text-shadow: 0 0 0 rgba(255, 255, 255, 0);
-  }
-  100% {
-    text-shadow: 0 0 18px rgba(255, 255, 255, 0.5);
+    -webkit-transform: scale(1.25) translate(20px, 15px);
+    transform: scale(1.25) translate(20px, 15px);
+    -webkit-transform-origin: right bottom;
+    transform-origin: right bottom;
   }
 }
 

@@ -251,7 +251,26 @@
   &.active {
     background: $gradient;
     color: #FFFFFF;
+    &:after {
+      color: #FFFFFF;
+    }
   }
+  &.active {
+    &:after {
+      transform: rotate(-180deg);
+    }
+  }
+  &::after {
+    content: '\f078';
+    font-family: 'Font Awesome 5 Pro';
+    border: none;
+    margin-left: 8px;
+    font-size: 10px;
+    color: #8c8c8c;
+    transform-origin: center;
+    transition: .2s ease-in;
+  }
+
 }
 
 .filter-toggler {
