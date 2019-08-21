@@ -37,7 +37,18 @@ $(document).ready(function () {
         arrows: false,
         fade: true,
         asNavFor: '.prod-photos',
-        slide: '.prod-view-item'
+        slide: '.prod-view-item',
+        responsive: [
+            {
+                breakpoint: 992,
+                settings: {
+                    asNavFor: null,
+                    arrows: true,
+                    nextArrow: '<i class="fas fa-chevron-right"></i></i>',
+                    prevArrow: '<i class="fas fa-chevron-left"></i></i>',
+                }
+            }
+        ]
     });
 
     $('.prod-photos').slick({
@@ -45,6 +56,14 @@ $(document).ready(function () {
         slidesToScroll: 1,
         asNavFor: '.prod-view',
         focusOnSelect: true,
+        responsive: [
+            {
+                breakpoint: 992,
+                settings: {
+                    asNavFor: null,
+                }
+            }
+        ]
     });
 
     var stHeight = $('.prod-photos .slick-track').height();
@@ -176,7 +195,7 @@ $(document).ready(function () {
     });
 
 
-    $('.progress-bar').each(function() {
+    $('.progress-bar').each(function () {
         let valuenow = $(this).attr("aria-valuenow"),
             valuemax = $(this).attr("aria-valuemax"),
             progressBarWidth = (valuenow / valuemax * 100) + '%';
@@ -191,7 +210,6 @@ $(document).ready(function () {
     });
 
 
-
     // ==========PRICE SLIDER==========
 // Min & max values
     let min = 10,
@@ -201,13 +219,13 @@ $(document).ready(function () {
         $("#price-slider").slider({
             min: min,
             max: max,
-            values: [min,  max],
+            values: [min, max],
             range: true,
             animate: "fast",
-            slide: function( event, ui ) {
-                $( "#amount" ).val(ui.values[ 0 ] + " грн" + " - " + ui.values[ 1 ] + " грн");
+            slide: function (event, ui) {
+                $("#amount").val(ui.values[0] + " грн" + " - " + ui.values[1] + " грн");
             },
-            change: function() {
+            change: function () {
                 var counterTop = $("#price-slider").offset().top - $(window).scrollTop(),
                     counterLeft = $('.filters-wrap').offset().left + $('.filters-wrap').width() + 11;
 
@@ -218,15 +236,38 @@ $(document).ready(function () {
             }
         });
     }
+
     initPriceSlider();
 
-    $( "#amount" ).val($( "#price-slider" ).slider("values", 0 ) +
-        " грн" + " - " + $( "#price-slider" ).slider( "values", 1 ) + " грн" );
+    $("#amount").val($("#price-slider").slider("values", 0) +
+        " грн" + " - " + $("#price-slider").slider("values", 1) + " грн");
 
-      // ==========PRICE SLIDER END==========
+    // ==========PRICE SLIDER END==========
 
     $('.reset-form-btn').click(function () {
         counterBox.fadeOut();
-        $("#price-slider").slider( "option", "values", [ min, max ] );
-    })
+        $("#price-slider").slider("option", "values", [min, max]);
+    });
+
+    $('.recommend-products').slick({
+        slidesToShow: 4,
+        speed: 500,
+        cssEase: 'ease-in',
+        arrows: false,
+        responsive: [
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 3,
+                }
+            },
+            {
+                breakpoint: 670,
+                settings: {
+                    slidesToShow: 2,
+                }
+            }
+        ]
+    });
+
 });
