@@ -85,9 +85,17 @@ main {
   }
 }
 
-.toggler-contacts,
-.toggler-search {
+.toggler-contacts {
+  width: 40px;
+  height: 40px;
   cursor: pointer;
+  background: url("../media/phone-call.svg") no-repeat center;
+}
+.toggler-search {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  background: url("../media/search-icon.svg") no-repeat center;
 }
 
 .header-search {

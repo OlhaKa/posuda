@@ -19,7 +19,19 @@
 
 }
 
+@media (max-width: 1024px) {
+  .footer-search form {
+    max-width: 100%;
+    input {
+      width: 100%;
+    }
+  }
+}
+
 @media (max-width: 991.98px) {
+  .reset-form-btn {
+     margin: 20px;
+  }
   .home .tab-pane-content {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -264,6 +276,13 @@
 }
 
 @media (max-width: 767.98px) {
+  .catalog .more-items-wrap {
+    flex-direction: column;
+    margin-top: 57px;
+    .more-items-btn {
+      margin-bottom: 65px;
+    }
+  }
   .basket .products-table-row {
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas: "photo name action" "photo price action" "photo count action" "photo amount action";
@@ -462,12 +481,25 @@
       }
 
       .sorting {
-        margin: 0 0 43px 0;
+        margin: 0 0 5px 0;
         flex-basis: 100%;
 
         .dropdown-menu {
           margin-left: 5px;
         }
+      }
+      .items-on-page {
+        margin: 0;
+        flex-basis: 100%;
+        .dropdown {
+          width: 100% !important;
+          .dropdown-toggle {
+            justify-content: center;
+          }
+        }
+      }
+      .pagination {
+        margin-top: 43px;
       }
     }
 
@@ -511,6 +543,7 @@
   .catalog .catalog-grid {
     grid-template-columns: 280px;
     justify-content: center;
+    margin-top: 43px;
 
     .img-wrap {
       height: 330px;
@@ -715,6 +748,10 @@
   .filter-control {
     &:first-child {
       padding-top: 0;
+    }
+
+    &:last-child {
+      border-bottom: 0;
     }
   }
   #prod-descr .nav-link {

@@ -270,4 +270,24 @@ $(document).ready(function () {
         ]
     });
 
+
+    document.addEventListener('click',
+        hideOnClickOutside(".header-contacts-wrap", ".toggler-contacts"),
+        hideOnClickOutside(".header-search", ".toggler-search")
+    );
+
+
+    function hideOnClickOutside(blockName, toggler) {
+        $('body').on('click', function (e) {
+            if ($(window).width() <= 992) {
+                if (!$(blockName).is(e.target)
+                    && $(blockName).has(e.target).length === 0
+                    && !$(event.target).is(toggler)) {
+                    $(blockName).slideUp();
+                }
+            }
+        });
+    }
+
+
 });

@@ -218,10 +218,6 @@
   border-bottom: 1px solid #EEEEEE;
   padding: 40px 0 20px;
 
-  &:last-child {
-    border-bottom: 0;
-  }
-
   .card {
     border: none;
     padding: 0;
@@ -510,4 +506,7 @@
   color: #222222;
   margin-top: 22px;
   cursor: pointer;
+  span {
+    text-decoration: line-through;
+  }
 }
