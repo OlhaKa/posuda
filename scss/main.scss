@@ -63,14 +63,24 @@ h5 {
 
 main {
   min-height: calc(100vh - 575px);
+  &.scrolled {
+    margin-top: 100px;
+  }
 }
 
 //========HEADER=========
+header {
+  background: #FFFFFF;
+}
+
 .top-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   min-height: 100px;
+  &.scrolled {
+    margin-bottom: 50px;
+  }
 }
 
 .header-contacts {
@@ -160,10 +170,6 @@ main {
 
 .hc-offcanvas-nav .nav-wrapper {
   background: rgba(56, 56, 56, 0.95);
-}
-
-.hc-offcanvas-nav .nav-container {
-  top: 100px;
 }
 
 .nav-open.hc-offcanvas-nav .nav-container {
@@ -333,3 +339,14 @@ footer {
   }
 
 }
+
+.btm-header.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+//
+//header.scrolled {
+//  padding-bottom: 50px;
+//}

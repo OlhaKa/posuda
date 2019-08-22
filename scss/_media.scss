@@ -29,6 +29,13 @@
 }
 
 @media (max-width: 991.98px) {
+  header.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+  }
+
   .reset-form-btn {
      margin: 20px;
   }
@@ -418,6 +425,7 @@
 }
 
 @media (max-width: 575.98px) {
+
   body h2 {
     font-size: 24px;
     line-height: 29px;
@@ -620,15 +628,17 @@
 
 @media (min-width: 992px) {
 
+  .hc-offcanvas-nav .nav-container {
+    top: 100px;
+  }
+
   .sorting,
   .items-on-page {
     .dropdown-menu {
       top: 20px !important;
     }
   }
-  //.container-lg {
-  //  max-width: calc(100% - 100px);
-  //}
+
   .btm-header {
     min-height: 50px;
     background-color: $dark-grey;

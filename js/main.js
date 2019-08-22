@@ -70,7 +70,10 @@ $(document).ready(function () {
     $('.prod-photos .slick-slide').css('height', stHeight);
 
     $(window).on("load resize", function (e) {
-        changeSelectTitle()
+        changeSelectTitle();
+        if ($(window).width() <= 576) {
+            replaceCounterBox();
+        }
     });
 
     function changeSelectTitle() {
@@ -83,10 +86,15 @@ $(document).ready(function () {
 
     var counterBox = $('.counterBox');
 
+    function replaceCounterBox() {
+        $('.staticCounterBox').removeClass('counterBox');
+        $("#filters-form").append($('.staticCounterBox'));
+    }
+
     $('.filters-btn').click(function () {
         $('.filters-wrap').toggleClass('showed');
         $(this).toggleClass('active');
-        if (counterBox.is(":visible")) {
+        if (counterBox.is(":visible") && $(window).width() > 768) {
             counterBox.fadeOut();
         } else if ($("input:checked").length && $('.filters-wrap').hasClass('showed')) {
             counterBox.fadeIn();
@@ -111,14 +119,13 @@ $(document).ready(function () {
 
     var $toggle = $('#toggler-menu');
 
-    $('#main-nav').hcOffcanvasNav({
+    let mainMenu = $('#main-nav').hcOffcanvasNav({
         maxWidth: 992,
         side: "left",
         labelClose: 'МЕНЮ',
         labelBack: 'НАЗАД',
         customToggle: $toggle,
     });
-
 
     $(".toggler-search").click(function () {
         $(".header-search").slideToggle();
@@ -288,6 +295,34 @@ $(document).ready(function () {
             }
         });
     }
+
+    window.onscroll = function () {
+        fixedDesktopHeader();
+    };
+
+    let headerLine = $('.btm-header'),
+        header = $('header');
+
+    function fixedDesktopHeader() {
+        if ($(window).width() >= 992) {
+            if (window.pageYOffset > 99) {
+                $('.top-header').addClass('scrolled');
+                headerLine.addClass("sticky");
+            } else {
+                $('.top-header').removeClass('scrolled');
+                headerLine.removeClass("sticky");
+            }
+        } else {
+            if (window.pageYOffset > 99) {
+                $('main').addClass('scrolled');
+                header.addClass("sticky");
+            } else {
+                $('main').removeClass('scrolled');
+                header.removeClass("sticky");
+            }
+        }
+    }
+
 
 
 });

@@ -393,6 +393,28 @@
   }
 }
 
+.staticCounterBox {
+  background: #646464;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 600;
+  font-size: 15px;
+  color: #FFFFFF;
+  min-height: 150px;
+  padding: 30px 20px;
+  z-index: 2;
+  transition: top .2s ease;
+  .gradient-btn {
+    display: block;
+    width: 106px;
+    background: #646464;
+    margin: 25px auto 0;
+    border: 2px solid #FFFFFF;
+    color: #FFFFFF;
+  }
+}
+
+
 /* Ширина слайдера */
 #price-slider {
   width: calc(100% - 17px);
