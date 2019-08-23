@@ -8,10 +8,6 @@
 @import "reviews";
 @import "product";
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
   font-family: $montserrat;
   color: #222222;
@@ -152,7 +148,7 @@ header {
 
 // ---mobile----
 
-.hc-offcanvas-nav {
+body .hc-offcanvas-nav {
   li.nav-close a {
     background: #222222;
     border: none;
@@ -161,15 +157,24 @@ header {
 
   a {
 
-    font-size: 12px;
+    font-size: 12px !important;
     line-height: 15px;
     text-transform: uppercase;
-    border-bottom: none;
+    border-bottom: none !important;
   }
 }
 
 .hc-offcanvas-nav .nav-wrapper {
-  background: rgba(56, 56, 56, 0.95);
+  background: rgba(56, 56, 56, 0.95) ;
+}
+
+.hc-offcanvas-nav ul,
+.hc-offcanvas-nav .nav-container {
+  background: transparent !important;
+}
+
+.hc-offcanvas-nav .nav-container {
+  top: 100px;
 }
 
 .nav-open.hc-offcanvas-nav .nav-container {
@@ -196,6 +201,14 @@ header {
   display: none;
 }
 
+.hc-offcanvas-nav .nav-content {
+  a.with-label span{
+    background: $gradient;
+    background-size: 600% 100%;
+    padding: 1px 2px;
+    height: 18px;
+  }
+}
 
 //========HEADER END=========
 

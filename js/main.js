@@ -121,10 +121,15 @@ $(document).ready(function () {
 
     let mainMenu = $('#main-nav').hcOffcanvasNav({
         maxWidth: 992,
-        side: "left",
+        position: "left",
         labelClose: 'МЕНЮ',
         labelBack: 'НАЗАД',
         customToggle: $toggle,
+    });
+
+    mainMenu.on('open', function() {
+        $('main').addClass('scrolled');
+        header.addClass("sticky");
     });
 
     $(".toggler-search").click(function () {
@@ -297,7 +302,7 @@ $(document).ready(function () {
     }
 
     window.onscroll = function () {
-        fixedDesktopHeader();
+            fixedDesktopHeader();
     };
 
     let headerLine = $('.btm-header'),
@@ -316,13 +321,11 @@ $(document).ready(function () {
             if (window.pageYOffset > 99) {
                 $('main').addClass('scrolled');
                 header.addClass("sticky");
-            } else {
+            } else if (window.pageYOffset < 99 && !$(mainMenu.isOpen())) {
                 $('main').removeClass('scrolled');
                 header.removeClass("sticky");
             }
         }
     }
-
-
 
 });
