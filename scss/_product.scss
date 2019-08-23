@@ -52,6 +52,10 @@
       width: calc(100% - 20px);
       height: calc(100% - 20px);
       background: transparent;
+
+      &:hover {
+        cursor: pointer;
+      }
     }
 
     &.slick-current {
@@ -144,6 +148,7 @@
     text-decoration-line: underline;
     text-transform: uppercase;
     color: $dark-grey;
+    cursor: pointer;
   }
 
   .prod-id {
@@ -200,6 +205,8 @@
     font-size: 14px;
     line-height: 21px;
     text-align: center;
+    user-select: none;
+
     &:hover {
       color: #222222;
     }
@@ -273,6 +280,7 @@
 .product {
   .new-review {
     padding-top: 102px;
+
     h1 {
       margin-top: 0;
     }
@@ -292,13 +300,16 @@
 
 .recommend {
   margin-bottom: 108px;
+
   h2 {
     text-align: center;
-    margin-bottom: 43px;
+    margin: 94px 0 43px;
   }
+
   .prod-card {
     position: relative;
     padding: 0 16px 10px;
+
     .prod-card-label {
       position: absolute;
       top: 15px;
@@ -315,6 +326,7 @@
       letter-spacing: 1px;
       z-index: 1;
     }
+
     .img-wrap {
       height: 320px;
       border: 2px solid #f4f4f4;
@@ -329,12 +341,14 @@
         max-height: 100%;
       }
     }
+
     .prod-price {
       font-weight: 600;
       line-height: 20px;
       text-align: center;
       color: #FF0084;
     }
+
     .prod-name {
       font-weight: 600;
       font-size: 14px;
@@ -351,13 +365,14 @@
       -webkit-line-clamp: 2;
       word-wrap: break-word;
       max-height: 34px;
-         }
+    }
 
     &:hover {
       .img-wrap {
         border: 2px solid #CFCACA;
       }
     }
+
     a:focus {
       outline: none;
     }

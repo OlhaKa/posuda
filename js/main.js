@@ -221,6 +221,12 @@ $(document).ready(function () {
         $('#prod-descr a[href="#d"]').tab('show');
     });
 
+    $('.link-to-new-review').on('click', function (e) {
+        $([document.documentElement, document.body]).animate({
+            scrollTop: $("#new-review").offset().top
+        });
+    });
+
 
     // ==========PRICE SLIDER==========
 // Min & max values
