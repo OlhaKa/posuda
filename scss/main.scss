@@ -210,6 +210,10 @@ body .hc-offcanvas-nav {
   }
 }
 
+.hc-offcanvas-nav .nav-content {
+  max-height: calc(100vh - 160px) !important;
+}
+
 //========HEADER END=========
 
 
@@ -359,7 +363,3 @@ footer {
   width: 100%;
   z-index: 10;
 }
-//
-//header.scrolled {
-//  padding-bottom: 50px;
-//}

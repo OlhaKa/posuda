@@ -1,8 +1,10 @@
 .checkout {
-  padding-top: 72px;
   padding-bottom: 145px;
   h3 {
     margin-bottom: 39px;
+  }
+  .checkout-wrap {
+    padding-top: 72px;
   }
 }
 
@@ -39,6 +41,9 @@
     border: 2px solid #EEEEEE;
     padding: 0 13px;
     font-size: 14px;
+    &:focus {
+      border: 2px solid #222222;
+    }
 
     &::placeholder {
       font-size: 14px;
@@ -179,4 +184,16 @@
   float: right;
   cursor: pointer;
   margin-top: -40px;
+}
+
+.send-order {
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 18px;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 0 30px;
+  margin-top: 72px;
 }

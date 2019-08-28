@@ -218,6 +218,7 @@
   }
   .checkout-wrap {
     position: relative;
+    overflow-x: hidden;
   }
   .sidebar-basket {
     position: absolute;
@@ -279,6 +280,10 @@
 
   .product .recommend .prod-card .img-wrap {
     height: 240px;
+  }
+
+  .basket h1 {
+    margin: 40px 0 26px;
   }
 }
 
@@ -425,6 +430,10 @@
 }
 
 @media (max-width: 575.98px) {
+
+  .checkout .sidebar-basket {
+    padding: 30px 15px;
+  }
 
   body h2 {
     font-size: 24px;

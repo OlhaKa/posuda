@@ -120,7 +120,7 @@
                     <li><a href="">Кухонные <br>инструменты</a></li>
                     <li><a href="">Кухонные <br>принадлежности</a></li>
                     <li><a href="">Посуда для <br>активного отдыха</a></li>
-                    <li><a href="" class="with-label">АКЦИИ</a></li>
+                    <li><a href="" class="with-label"><span>АКЦИИ</span></a></li>
                 </ul>
             </nav>
         </div>
@@ -135,10 +135,11 @@
                 </div>
                 <h3>Оформить заказ</h3>
                 <div class="checkout-form-wrap">
+                    <form id="checkout-form" action="" autocomplete="off">
                     <div class="customer-name">
                         <div class="form-item">
                             <label for="name">имя *</label>
-                            <input type="text" name="name" id="name">
+                            <input type="text" name="name" id="name" >
                         </div>
                         <div class="form-item">
                             <label for="surname">Фамилия *</label>
@@ -174,6 +175,8 @@
                         <textarea name="comment" id="comment" cols="30" rows="6"
                                   placeholder="Здесь Вы можете оставить комментарий"></textarea>
                     </div>
+                    <button class="black-btn send-order">оформить</button>
+                    </form>
                 </div>
             </div>
             <div class="sidebar-basket">
@@ -239,7 +242,7 @@
                     <div class="common-amount-val">300 грн</div>
                 </div>
                 <div class="back-btn">
-                    <a href="">
+                    <a href="basket.html">
                         <span class="back-btn-img">
                             <img src="media/Arrow-icon.svg" alt="">
                         </span>
@@ -333,5 +336,9 @@
 <script src="js/jquery.rateit.min.js"></script>
 <script src="js/hc-offcanvas-nav.js"></script>
 <script src="js/bootstrap-select.min.js"></script>
+<script
+        src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+        integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+        crossorigin="anonymous"></script>
 <script src="js/main.js"></script>
 </html>
