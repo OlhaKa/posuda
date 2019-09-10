@@ -677,10 +677,11 @@
 
         &:hover {
           .sub-menu {
-            visibility: visible;
-            opacity: 1;
-            z-index: 1;
-            transform: translateY(0%);
+
+
+
+            //z-index: 1;
+            //transform: translateY(0%);
           }
 
           & > a:not(.with-label) {
@@ -730,14 +731,13 @@
     position: absolute;
     top: 50px;
     left: 0;
-    transform: translateY(-2em);
-    transition: transform 0.5s ease-in 0s, visibility 0s linear 0.5s, color 0.2s 0.5s;
     width: 100%;
-    background-color: rgba(56, 56, 56, 0.95);
-    visibility: hidden;
-    opacity: 0;
     padding: 26px 65px 44px;
+    background-color: rgba(56, 56, 56, 0.95);
     columns: 4;
+    z-index: 1;
+    height: auto;
+    display: none;
 
     li {
       a {

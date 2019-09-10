@@ -12,6 +12,9 @@ $(document).ready(function () {
         }
     });
 
+    $('#main-nav>ul>li').hover(function () {
+        $(this).find(".sub-menu").fadeToggle(200);
+    });
 
     $(".home-banners").slick({
         slidesToShow: 1,
